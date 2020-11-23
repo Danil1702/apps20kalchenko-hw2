@@ -110,7 +110,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public Object[] toArray() {
-        return array;
+        return array.clone();
     }
 
     @Override
