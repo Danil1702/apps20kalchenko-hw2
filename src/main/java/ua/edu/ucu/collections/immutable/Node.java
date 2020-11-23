@@ -8,15 +8,15 @@ public class Node {
         return next;
     }
 
-    public void setNext(Node next) {
-        this.next = next;
+    public void setNext(Node nextNode) {
+        this.next = nextNode;
     }
 
     public Object getValue() {
         return value;
     }
 
-    public void setValue(Object value) {
-        this.value = value;
+    public void setValue(Object valueNode) {
+        this.value = valueNode;
     }
 }
