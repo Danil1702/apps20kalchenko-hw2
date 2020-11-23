@@ -20,7 +20,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public ImmutableArrayList add(int index, Object e) {
-        if(index > array.length || index < 0) {
+        if (index > array.length || index < 0) {
             throw new IndexOutOfBoundsException();
         }
         Object[] newArray = new Object[array.length + 1];
@@ -38,7 +38,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public ImmutableArrayList addAll(int index, Object[] c) {
-        if(index > array.length || index < 0) {
+        if (index > array.length || index < 0) {
             throw new IndexOutOfBoundsException();
         }
         Object[] newArray = new Object[array.length + c.length];
@@ -51,7 +51,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public Object get(int index) {
-        if(index >= array.length || index < 0){
+        if (index >= array.length || index < 0){
             throw new IndexOutOfBoundsException();
         }
         return array[index];
@@ -59,12 +59,12 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public ImmutableArrayList remove(int index) {
-        if(index >= array.length || index < 0) {
+        if (index >= array.length || index < 0) {
             throw new IndexOutOfBoundsException();
         }
         Object[] newArray = new Object[array.length - 1];
         int counter = 0;
-        for(int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if(i != index) {
                 newArray[counter] = array[i];
                 counter++;
@@ -75,7 +75,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public ImmutableArrayList set(int index, Object e) {
-        if(index >= array.length || index < 0) {
+        if (index >= array.length || index < 0) {
             throw new IndexOutOfBoundsException();
         }
         Object[] newArray = array.clone();
@@ -85,7 +85,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public int indexOf(Object e) {
-        for(int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if(array[i] == e){
                 return i;
             }
