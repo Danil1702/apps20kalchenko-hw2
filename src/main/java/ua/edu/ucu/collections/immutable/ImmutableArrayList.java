@@ -51,7 +51,7 @@ public class ImmutableArrayList implements ImmutableList {
 
     @Override
     public Object get(int index) {
-        if (index >= array.length || index < 0){
+        if (index >= array.length || index < 0) {
             throw new IndexOutOfBoundsException();
         }
         return array[index];
@@ -65,7 +65,7 @@ public class ImmutableArrayList implements ImmutableList {
         Object[] newArray = new Object[array.length - 1];
         int counter = 0;
         for (int i = 0; i < array.length; i++) {
-            if(i != index) {
+            if (i != index) {
                 newArray[counter] = array[i];
                 counter++;
             }
@@ -86,7 +86,7 @@ public class ImmutableArrayList implements ImmutableList {
     @Override
     public int indexOf(Object e) {
         for (int i = 0; i < array.length; i++) {
-            if(array[i] == e){
+            if (array[i] == e) {
                 return i;
             }
         }
