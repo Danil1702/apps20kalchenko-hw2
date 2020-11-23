@@ -10,7 +10,7 @@ public class ImmutableArrayList implements ImmutableList {
     }
 
     public ImmutableArrayList(Object[] from) {
-        this.array = from;
+        this.array = from.clone();
     }
 
     @Override
