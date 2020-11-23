@@ -26,7 +26,8 @@ public class ImmutableArrayList implements ImmutableList{
         Object[] newArray = new Object[array.length + 1];
         System.arraycopy(array, 0, newArray, 0, index);
         newArray[index] = e;
-        System.arraycopy(array, index, newArray, index + 1, array.length - index);
+        System.arraycopy(array, index, newArray, 
+                         index + 1, array.length - index);
         return new ImmutableArrayList(newArray);
     }
 
@@ -43,7 +44,8 @@ public class ImmutableArrayList implements ImmutableList{
         Object[] newArray = new Object[array.length + c.length];
         System.arraycopy(array, 0, newArray, 0, index);
         System.arraycopy(c, 0, newArray, index, c.length);
-        System.arraycopy(array, index, newArray, index + c.length, array.length - index);
+        System.arraycopy(array, index, newArray, 
+                         index + c.length, array.length - index);
         return new ImmutableArrayList(newArray);
     }
 
