@@ -73,8 +73,7 @@ public class ImmutableLinkedList implements ImmutableList {
             newList.setFirstNode(temp.getFirstNode());
             Node current = temp.getLastNode();
             current.setNext(oldHead);
-        }
-        else{
+        } else {
             Node current = newList.getNodeByIndex(index - 1);
             Node oldNext = current.getNext();
             current.setNext(temp.getFirstNode());
@@ -94,11 +93,11 @@ public class ImmutableLinkedList implements ImmutableList {
 
     @Override
     public ImmutableLinkedList remove(int index) {
-        if (index >= size || index < 0){
+        if (index >= size || index < 0) {
             throw new IndexOutOfBoundsException();
         }
         ImmutableLinkedList newList = copy();
-        if (index == 0){
+        if (index == 0) {
             newList.setFirstNode(first.getNext());
         }
         else {
@@ -168,7 +167,7 @@ public class ImmutableLinkedList implements ImmutableList {
         return getFirstNode().getValue();
     }
 
-    public Object getLast(){
+    public Object getLast() {
         return getLastNode().getValue();
     }
 
