@@ -3,13 +3,13 @@ package ua.edu.ucu.collections.immutable;
 import java.util.Arrays;
 
 public class ImmutableArrayList implements ImmutableList{
-    private Object array[];
+    private Object[] array;
 
     public ImmutableArrayList(){
         this.array = new Object[0];
     }
 
-    public ImmutableArrayList(Object from[]){
+    public ImmutableArrayList(Object[] from){
         this.array = from;
     }
 
